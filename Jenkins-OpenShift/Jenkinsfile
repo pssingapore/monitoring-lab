@@ -2,9 +2,7 @@ pipeline {
   agent any
   parameters {
     string(name: 'projectName', defaultValue: 'psapp', description: 'Project name to create or target for update')
-  }
-    
-  
+  } 
   stages {
     stage('Database') {
       steps {
@@ -36,6 +34,5 @@ pipeline {
         build job: 'grafana', parameters: [[$class: 'StringParameterValue', name: 'projectName', value: projectName]]
       }
     }
-  }
-  
+  }  
 }
