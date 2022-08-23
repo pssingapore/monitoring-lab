@@ -147,7 +147,3 @@ docker-compose [start|stop] [<serviceName>]
 ```
 
 Where <serviceName> is optional if you want to start all of the containers.
-
-
-
-Test edit
