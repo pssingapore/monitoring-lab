@@ -5,10 +5,10 @@ pipeline {
   } 
   stages {
     stage('Database') {
-      
-       build job: 'PSDB', parameters: [[$class: 'StringParameterValue', name: 'projectName', value: projectName]]
-      
-    }
+      steps {
+        build job: 'PSDB', parameters: [[$class: 'StringParameterValue', name: 'projectName', value: projectName]]
+        }
+      }
     stage('DB Monitoring') {
       steps {
         build job: 'dbmon', parameters: [[$class: 'StringParameterValue', name: 'projectName', value: projectName]]
